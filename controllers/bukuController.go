@@ -62,10 +62,10 @@ func ConnectDB() {
 	psqlInfo := os.Getenv("DATABASE_URL")
 	if psqlInfo == "" {
 		// Ambil data konfigurasi dari file .env
-		host := getEnv("PGHOST", "localhost")
+		host := getEnv("PGHOST", "postgres.railway.internal")
 		user := getEnv("PGUSER", "postgres")
-		password := getEnv("PGPASSWORD", "123")
-		dbname := getEnv("PGDATABASE", "db-go-buku")
+		password := getEnv("PGPASSWORD", "nSYWojixSBDtyStykmJUXCVKJJtYZMec")
+		dbname := getEnv("PGDATABASE", "railway")
 
 		// Konversi teks port di .env menjadi angka integer untuk fmt.Sprintf
 		portStr := getEnv("PGPORT", "5432")
